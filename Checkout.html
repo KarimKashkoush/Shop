@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <!-- Style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- fontowesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- normalize -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <section class="container">
+            <section class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search">
+            </section> 
+            <section class="logo">
+                <a href="index.html"><h1>karim</h1></a>
+            </section>
+            <section class="iqon">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-user"></i>
+            </section>
+        </section>
+    </header>
+    <!-- Start Nav -->
+    <nav>
+        <section class="container">
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="shop.html" class="active">shop</a></li>
+                <li><a href="katalogue.html">katalogue</a></li>
+                <li><a href="arrivals.html">nwe arrivals</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+        </section>
+    </nav>
+    <!-- End Nav -->
+    <section class="head">
+        <section class="container">
+            <h3>Home / <span>Checkout</span></h3>
+        </section>
+    </section>
+    <section class="signin">
+        <section class="container">
+            <p>Returing custome? <span>Click here</span> to login</p>
+        </section>
+    </section>
+    <section class="form">
+        <section class="container">
+            <section class="right-form-checkout">
+                <h3>coupon code</h3>
+                <section class="coupon_checkout">
+                    <p>Enter your coupon code if you have one.</p>
+                    <form>
+                        <input type="text" placeholder="Coupon Code">
+                        <input type="button" value="APPLY">
+                    </form>
+                </section>
+                <h3>your order</h3>
+                <section class="your-order">
+                    <section class="top">
+                        <section>
+                            <h2>product</h2>
+                            <h2>total</h2>
+                        </section>
+                        <section>
+                            <h4>top up t-shirt <span>(1)</span></span></h4>
+                            <h4>$250</h4>
+                        </section>
+                        <section>
+                            <h4>polo t-shirt <span>(1)</span></h4>
+                            <h4>$100</h4>
+                        </section>
+                        <section>
+                            <h4>cart subtotal</h4>
+                            <h4>$350</h4>
+                        </section>
+                        <section>
+                            <h4>order total</h4>
+                            <h4>$350</h4>
+                        </section>
+                    </section>
+                    <section class="type-payment">
+                        <h4>direct bank transform</h4>
+                        <h4>cheque payment</h4>
+                        <h4>paypal</h4>
+                    </section>
+                </section>
+            </section>
+            <section class="Details">
+                <h3>billing details</h3>
+                <form>
+                    <section>
+                        <label for="select">country</label>
+                        <select id="select" required>
+                            <option value="1" selected>Select Your Country</option>
+                            <option value="2">Egypt</option>
+                            <option value="3">Saudia Arabia</option>
+                            <option value="4">USA</option>
+                        </select>
+                    </section>
+                    <section class="name">
+                        <section>
+                            <label for="f-name">First Name</label>
+                            <input type="text" id="f-name" required>
+                        </section>
+                        <section>
+                            <label for="l-name">Last Name</label>
+                            <input type="text" id="l-name">
+                        </section>
+                    </section>
+                    <section>
+                        <label for="c-name">Company Name</label>
+                        <input type="text" id="c-name">
+                    </section>
+                    <section>
+                        <label for="a-name">Address</label>
+                        <input type="text" id="a-name" placeholder="Street Address">
+                        <input type="text" id="a-name" placeholder="Apartment, Suite, Unit etc. (Optional) ">
+                    </section>
+                    <section class="location">
+                        <section>
+                            <label for="state">State/Country</label>
+                            <input type="text" id="state">
+                        </section>
+                        <section>
+                            <label for="posta">Posta/Zip</label>
+                            <input type="text">
+                        </section>
+                    </section>
+                    <section class="contact-form">
+                        <section>
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email">
+                        </section>
+                        <section>
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone">
+                        </section>
+                    </section>
+                    <section class="chek">
+                        <section>
+                            <input type="checkbox" name="" id="">
+                            <p>create an account?</p>
+                        </section>
+                        <section>
+                            <input type="checkbox" name="" id="">
+                            <p>ship to a different address?</p>
+                        </section>
+                    </section>
+                    <section class="notes">
+                        <label for="notes">order notes</label>
+                        <textarea id="notes" rows="6" placeholder="Enter Your Notes..."></textarea>
+                    </section>
+                    <button>Applay now</button>
+                </form>
+            </section>
+        </section>
+    </section>
+    <!-- End Head -->
+    <!-- Start Footer -->
+    <footer>
+        <section class="container">
+            <section class="box">
+                <h2>navigations</h2>
+                <section class="links">
+                    <ul>
+                        <li><a href="">Sell Online</a></li>
+                        <li><a href="">Features</a></li>
+                        <li><a href="">shopping cart</a></li>
+                        <li><a href="">toro buiider</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="">mobilecommerce</a></li>
+                        <li><a href="">dropshipping</a></li>
+                        <li><a href="">website development</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="">point of safe</a></li>
+                        <li><a href="">hardware</a></li>
+                        <li><a href="">software</a></li>
+                    </ul>
+                </section>
+            </section>
+            <section class="box">
+                <h2>promo</h2>
+                <img src="Image/hero_1.jpg" alt="">
+                <h2>finding your perfect shose</h2>
+                <p>promo from nuary 15 - 25,2019</p>
+            </section>
+            <section class="box">
+                <h2>contact info</h2>
+                <section class="social">
+                    <i class="fa-sharp fa-solid fa-location-dot"><h5>Egypt - Dakahlia - Belqas</h5></i>
+                    <i class="fa-sharp fa-solid fa-phone"><h5>+20 103 311 364 6</h5></i>
+                    <i class="fa-solid fa-envelope"><h5>karimkashkoush1@gmail.com</h5></i>
+                </section>
+                <section class="subscribe">
+                    <h2>subscribe</h2>
+                    <input type="email" placeholder="E-mail">
+                    <input type="button" value="Send">
+                </section>
+            </section>
+        </section>
+    </footer>
+    <!-- End Footer -->
+    <!-- Start End -->
+    <section class="end">
+        <h3>Made with <a href="mailto:kmrek1252002@gmail.com?">karim Kashkous</a></h5>
+        </section>
+    </body>
+    <!-- End End -->
+</body>
+</html>

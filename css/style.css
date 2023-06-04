@@ -1,0 +1,1209 @@
+:root {
+    --padding:100px;
+    --main-color: blueviolet;
+    --sub-color:rgb(0, 200, 197);
+    --paragraf-color: #dbdbdb;
+    --transition:0.3s;
+}
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+body {
+    font-family: 'Cairo', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* Strat headr */
+header {
+    border-bottom:1px solid #eee ;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 92px;
+}
+header .search {
+    display: flex;
+    align-items: center;
+}
+header .search i{
+    color: var(--main-color);
+    font-size: 25px;
+    margin-right: 10px;
+}
+header .search input {
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--main-color);
+    font-size: 18px;
+    transition: var(--transition);
+    width:65px;
+}
+header .search input:focus {
+    width:200px;
+}
+header .search,.logo,.iqon {
+    flex: 1;
+}
+header .logo {
+    display: flex;
+    justify-content: center;
+}
+header .iqon {
+    display: flex;
+    justify-content: flex-end;
+}
+header .logo h1 {
+    color: black;
+    border: 1px solid var(--main-color);
+    padding: 5px 10px;
+}
+header .iqon i{
+    font-size: 18px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+header .iqon i:hover {
+    transform: scale(1.2);
+    color:var(--main-color)
+}
+header .iqon i:first-child {
+    position: relative;
+}
+header .iqon i:first-child::after {
+    content: "3";
+    position: absolute;
+    top: -12px;
+    right: -15px;
+    background-color: var(--main-color);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+    z-index: -1;
+}
+@media (max-width: 768px) {
+    header .search i{
+        font-size: 20px;
+        margin-right: 8px;
+    }
+    header .search {
+        display: none;
+    }
+    header .logo h1 {
+        padding: 3px 8px;
+        font-size: 25px;
+    }
+    header .iqon i{
+        font-size: 14px;
+        margin-left: 10px;
+    }
+    header .iqon i:first-child::after {
+        right: -5px;
+        background-color: var(--main-color);
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 10px;
+        z-index: -1;
+    }
+    header .logo {
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+/* End headr */
+/* Strat Nav */
+nav .container ul{
+    display: flex;
+    justify-content: center;
+    min-height: 61px;
+    align-items: center;
+}
+nav .container ul li a{
+    display: block;
+    color: black;
+    padding: 20px 10px;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+nav .container ul li .active {
+    color: var(--main-color);
+}
+nav .container ul .dropdown {
+    position: relative;
+}
+nav .container ul .dropdown .down {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color:var(--paragraf-color);
+    width: 150px;
+    display: none;
+}
+nav .container ul .dropdown:hover .down {
+    display: flex;
+}
+@media (max-width:768px) {
+    nav .container ul li a {
+        font-size: 12px;
+        padding: 0 5px;
+    }
+}
+/* End Nav */
+/* Start landing */
+.landing {
+    background-color: var(--sub-color);
+}
+.landing .container {
+    min-height: calc(100vh - 154px);
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+    align-items: center;
+}
+.landing .container .image img {
+    width: 600px;
+    max-width: 100%;
+}
+.landing .container .intro {
+    flex: 1;
+}
+.landing .container .intro H2 {
+    font-size: 45px;
+    margin: 0;
+    text-transform: capitalize;
+} 
+.landing .container .intro p {
+    font-size: 23px;
+    line-height: 1.6;
+    color: var(--paragraf-color);
+}
+.landing .container .intro a {
+    display: block;
+    color: white;
+    font-size: 18px;
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+    width: fit-content;
+    padding: 7px 15px;
+    background-color: var(--main-color);
+    text-transform: capitalize;
+    transition: var(--transition);
+}
+.landing .container .intro a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #eee;
+} 
+@media (max-width: 768px) {
+    .landing .container {
+        flex-direction: column;
+    }
+    .landing .container  .image {
+        padding: 30px 0;
+    }
+    .landing .container .intro {
+        text-align: center;
+        padding: 30px 0;
+    }
+    .landing .container .intro a {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+/* End landing */
+/* Start Services */
+.services .container {
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 60px 30px;
+    border-bottom: 1px solid #eee;
+}
+.services .container .box {
+    display: flex;
+}
+.services .container .box i {
+    color: var(--main-color);
+    font-size: 30px;
+    margin-right: 30px;
+}
+.services .container .box .text h3 {
+    margin: 0;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+.services .container .box .text p {
+    font-size: 16px;line-height: 1.6;
+    color: #acacac;
+}
+@media (max-width: 768px) {
+    .services .container .box {
+        flex-direction: column;
+        text-align: center;
+    }
+    .services .container .box i {
+        margin: 0 0 30px 0;
+    }
+}
+/* End Services */
+/* Start Collections */
+.Collections .container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
+}
+.Collections .container .svr {
+    width: 350px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+.Collections .container .svr img {
+    width: 350px;
+    height: 500px;
+    display: block;
+    transition: var(--transition);
+    position: relative;
+}
+.Collections .container .svr::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.251);
+    z-index: 1;
+}
+.Collections .container .svr:hover img {
+    transform: scale(1.2);
+}
+.Collections .container .svr .text h2, p{
+    color: rgb(255, 255, 255);
+}
+.Collections .container .svr .text {
+    position: absolute;
+    z-index: 2;
+    bottom: 10px;
+    left: 20px;
+}
+@media (max-width: 991px) {
+    .Collections .container {
+        flex-direction: column;
+    }
+    .Collections .container .svr {
+        width: 300px;
+        height: 350px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+    }
+    .Collections .container .svr img {
+        width: 280px;
+        height: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+/* End Collections */
+/* Start products */
+.products {
+    background-color: #fafafa;
+}
+.products .container {
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
+}
+.products .container .header h2 {
+    text-align: center;
+    font-size: 35px;
+    padding: 15px 0;
+    text-transform: capitalize;
+    position: relative;
+    margin-bottom: 60px;
+}
+.products .container .header h2::after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 50px;
+    background-color: #acacac;
+}
+.contact-products {
+    display: flex;
+    justify-content: space-between;
+}
+.contact-products .box {
+    width: 280px;
+    background-color: white;
+}
+.contact-products .box img {
+    width: 280px;
+}
+.contact-products .box .text {
+    text-align: center;
+    padding-bottom: 20px;
+}
+.contact-products .box p {
+    color: #acacac;
+}
+.contact-products .box h3{
+    color: var(--main-color);
+}
+.contact-products .box span {
+    color: var(--main-color);
+}
+@media (max-width: 991px) {
+    .contact-products {
+        flex-direction: column;
+    }
+    .contact-products .box {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 30px;
+    }
+}
+/* End products */
+/* Start Sale */
+.sale {
+    border-bottom: 1px solid #eee;
+}
+.sale .container {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
+}
+.sale .container img{
+    width: 650px;
+    max-width: 100%;
+}
+.sale .container .text h2 {
+    color: var(--main-color);
+    font-size: 40px;
+    margin: 0;
+    text-transform: capitalize;
+}
+.sale .container .text p {
+    color: #acacac;
+    line-height: 1.6;
+}
+.sale .container .text p span {
+    color: var(--main-color);
+}
+.sale .container .text p:first-child {
+    margin: 100px 0;
+}
+.sale .container .text a {
+    display: block;
+    color: white;
+    font-size: 18px;
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    padding: 7px 15px;
+    border-radius: 5px;
+    width: fit-content;
+    transition: var(--transition);
+}
+.sale .container .text a:hover {
+    box-shadow: 0 0 10px #acacac;
+    transform: scale(1.1);
+}
+@media (max-width: 991px) {
+    .sale .container {
+        flex-direction: column;
+    }
+    .sale .container .text {
+        text-align: center;
+    }
+    .sale .container .text a {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+/* End Sale */
+/* start Footer */
+footer {
+    margin-bottom: 50px;
+    background-color: #fdfdfd;
+}
+footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 30px;
+}
+footer h2 {
+    color: var(--main-color);
+    text-transform: capitalize;
+}
+footer p,a {
+    color: #acacac;
+}
+footer .box .links {
+    display: flex;
+    justify-content: space-between;
+}
+footer .box .links ul li {
+    padding: 10px;
+    font-size: 18px;
+}
+footer img {
+    width: 250px;
+}
+footer .social {
+    display: flex;
+    flex-direction: column;
+}
+footer .social i {
+    color: var(--main-color);
+}
+footer .social h5 {
+    display: inline-block;
+    color: #acacac;
+    margin-left: 10px;
+}
+footer input {
+    padding: 10px;
+    border: none;
+    outline: none;
+    border: 1px solid var(--main-color);
+}
+
+footer input[type=button] {
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px;
+    position: relative;
+    left: -58px;
+}
+@media (max-width:991px) {
+    footer {
+        display: block;
+    }
+    footer .box {
+        margin-bottom: 50px;
+    }
+    footer .box .links {
+        display: block;
+    }
+}
+/* End Footer */
+/* Start End */
+.end {
+    background-color: var(--main-color);
+}
+.end h3{
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
+    color: white;
+}
+.end h3 a {
+    color: var(--sub-color);
+}
+/* End End */
+/* -------- Start About page ---------- */
+/* Start Head */
+.head {
+    padding: 10px 0;
+    background-color: #f6f6f6;
+}
+.head H3 {
+    color: var(--main-color);
+}
+.head H3 span {
+    color: black;
+}
+/* End Head */
+/* Start started */
+.started {
+    border-bottom: 1px solid #acacac;
+}
+.started .container {
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
+    display: flex;
+    column-gap: 30px;
+}
+.started .container .image img {
+    width: 600px;
+}
+.started .container .text h2 {
+    font-size: 40px;
+    font-weight: normal;
+    position: relative;
+}
+.started .container .text h2::after {
+    content: "";
+    height: 3px;
+    width: 50px;
+    background-color: #acacac;
+    position: absolute;
+    top: -20px;
+    left: 0;
+}
+.started .container .text p {
+    color: #acacac;
+    line-height: 1.6;
+    font-size: 18px;
+}
+@media (max-width: 991px) {
+    .started .container {
+        flex-direction: column;
+    }
+    .started .container .text {
+        text-align: center;
+    }
+    .started .container .image img {
+        margin-bottom: 30px;
+        max-width: 100%;
+    }
+    .started .container .text h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+/* End started */
+/* Start Team */
+.team {
+    border-bottom: 1px solid #acacac;
+}
+.team .container {
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
+}
+.header{
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+.header::after{
+    content: "";
+    height: 3px;
+    width: 30px;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #acacac;
+}
+.team .container .contact-team {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px
+}
+.team .container .box {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+.team .container .image img {
+    width: 180px;
+    max-width: 100%;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+.team .container .text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #acacac;
+}
+/* End Team */
+/* -------- End About page ---------- */
+/* -------- Start Shop page ---------- */
+.shop {
+    background-color: white;
+    border-bottom: 1px solid #acacac;
+}
+.shop .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
+}
+.shop .container .sidebar {
+    width: 30%;
+    background-color: #f6f6f6;
+    height: 780px;
+}
+.shop .container .sidebar .number {
+    border-bottom: 30px solid white;
+    padding: 0 15px;
+}
+.shop .container .sidebar .filter .price input {
+    width: 80%;
+}
+.shop .container .sidebar .filter, .shop .container .sidebar h1 {
+    padding: 0 15px;
+}
+.shop .container .sidebar .filter section {
+    margin-bottom: 40px;
+}
+.shop .container .sidebar .filter .size section{
+    margin-bottom: 10px;
+}
+.shop .container .sidebar .filter .color p {
+    position: relative;
+    left: 30px;
+}
+.shop .container .sidebar .filter .color p::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    border: 1px solid;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    left: -30px;
+}
+.shop .container .sidebar .filter .color .red::before {
+    background-color: red;
+    border-color: red;
+}
+.shop .container .sidebar .filter .color .green::before {
+    background-color: green;
+    border-color: green;
+}
+.shop .container .sidebar .filter .color .blue::before {
+    background-color: blue;
+    border-color: blue;
+}
+.shop .container .sidebar h2 {
+    color: var(--main-color);
+}
+.shop .container .sidebar p {
+    color: #acacac;
+}
+.shop .container .contact-shop {
+    flex: 1;
+    background-color: #f6f6f6;
+    padding: 0 15px;
+}
+.shop .container .contact-shop .head-shop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.shop .container .contact-shop .head-shop h2 {
+    color: var(--main-color);
+}
+.shop .container .contact-shop .head-shop .option select {
+    background-color: transparent;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--paragraf-color);
+    outline: none;
+    border-radius: 0;
+    padding: 7px;
+}
+.shop .container .contact-shop .products {
+    background-color: #f6f6f6;
+    padding: 50px 0;
+}
+.shop .container .contact-shop .products .contact-products {
+    gap: 30px;
+}
+.shop .container .contact-shop .products .contact-products .box {
+    width: 230px;
+    max-width: 100%;
+}
+.shop .container .contact-shop .products .contact-products .box img {
+    width: 230px;
+    max-width: 100%;
+}
+@media (max-width: 991px) {
+    .shop .container .contact-shop {
+        background-color: white;
+    }
+    .shop .container .contact-shop .products {
+        padding: 10px 0;
+    }
+    .shop .container .sidebar {
+        display: none;
+    }
+}
+/* -------- End Shop page ---------- */
+/* -------- Start det page ---------- */
+.det .container {
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.det .container .image img {
+    max-width: 100%;
+}
+.det .container .contact-det {
+    flex: 1;
+    margin-left: 30px;
+}
+.det .container .contact-det h2 {
+    color: var(--main-color);
+    font-size: 40px;
+    position: relative;
+    margin: 0;
+}
+.det .container .contact-det h2::after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #acacac;
+}
+.det .container .contact-det p {
+    color: #acacac;
+    line-height: 1.6;
+    font-size: 18px;
+}
+.det .container .contact-det span {
+    color: var(--main-color);
+    font-weight: 600;
+    font-size: 30px;
+    display: block;
+    margin-bottom: 15px;
+}
+.det .container .contact-det h4 {
+    color: var(--main-color);
+    font-size: 20px;
+    margin: 0 0 10px 0;
+}
+.det .container .contact-det .radio input {
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+.det .container .contact-det .number input {
+    width: 50px;
+}
+.det .container .contact-det a {
+    color: white;
+    border: 1px solid var(--main-color);
+    padding: 7px 15px;
+    border-radius: 5px;
+    background-color: var(--main-color);
+    display: block;
+    width: fit-content;
+    margin-top: 25px;
+    transition: var(--transition);
+}
+.det .container .contact-det a:hover {
+    box-shadow: 0 0 10px #acacac;
+    transform: scale(1.2);
+}
+@media (max-width: 991px) {
+    .det .container {
+        flex-direction: column;
+    }
+    .det .container .contact-det {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .det .container .image img {
+        max-width: 100%;
+        margin-bottom: 60px;
+    }
+    .det .container .contact-det h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .det .container .contact-det a {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+/* -------- End det page ---------- */
+/* -------- Start cart page ---------- */
+.table .container {
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
+    overflow-x: auto;
+}
+.table .container table {
+    width: 100%;
+    border: 2px solid var(--main-color);
+}
+.table .container table td {
+    width: fit-content;
+    text-align: center;
+}
+.table .container table th {
+    color: white;
+    padding: 15px;
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+.table .container table h3 {
+    color: white;
+    padding: 10px;
+    background-color: var(--main-color);
+    width: fit-content;
+    margin: auto;
+    cursor: pointer;
+}
+.table .container table img {
+    width: 150px;
+}
+.cart .container {
+    padding-bottom: var(--padding);
+    display: flex;
+    justify-content: space-between;
+}
+.cart .container .coupon a:first-child {
+    color: white;
+    padding: 7px 15px;
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+    background-color: var(--main-color);
+    margin-right: 10px;
+    font-size: 18px;
+    display: block;
+    width: 100%;
+    text-align: center; 
+    margin-bottom: 5px;
+    transition: var(--transition);
+}
+.cart .container .coupon a:nth-child(2) {
+    color: var(--main-color);
+    padding: 7px 15px;
+    font-size: 18px;
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    transition: var(--transition);
+}
+.cart .container .coupon a:hover {
+    box-shadow: 0 0 10px var(--main-color);
+}
+.cart .container .coupon h3 {
+    color: var(--main-color);
+    font-size: 30px;
+    margin-bottom: 0;
+}
+.cart .container .coupon p {
+    color: #acacac;
+    font-size: 18px;
+}
+.cart .container .coupon input {
+    padding: 7px 15px;
+    border: 1px solid var(--main-color);
+    outline: none;
+    border-radius: 5px;
+}
+.cart .container .coupon input[type=button] {
+    background-color: var(--main-color);
+    color: white;
+}
+.cart .container .cart-total h3 {
+    color: var(--main-color);
+    font-size: 30px;
+    width: 280px;
+    margin-top: 0;
+}
+.cart .container .cart-total table{
+    width: 100%;
+}
+.cart .container .cart-total td {
+    padding: 10px 0;
+    text-align: start;
+}
+.cart .container .cart-total .sallrey {
+    text-align: end;
+    color: var(--main-color);
+}
+.cart .container .cart-total a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 7px 15px;
+    border: 1px solid var(--main-color);
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 5px;
+    margin-top: 30px;
+    transition: var(--transition);
+}
+.cart .container .cart-total a:hover {
+    box-shadow: 0 0 10px var(--main-color);
+}
+@media (max-width: 991px) {
+    .cart .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .cart .container .cart-total h3 {
+        margin-top: 60px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+/* -------- End cart page ---------- */
+/* -------- Start Checkout page ---------- */
+.signin .container {
+    padding-top: 50px;
+}
+.signin .container p {
+    color: #acacac;
+    padding: 15px;
+    border: 1px solid #acacac;
+}
+.signin .container p span {
+    color: var(--main-color);
+}
+.form .container {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 30px;
+}
+.form .container h3 {
+    color: var(--main-color);
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.form .container .Details {
+    width: 100%;
+    text-transform: capitalize;
+    overflow-x: hidden;
+}
+.form .container .Details form {
+    padding: 15px;
+    border: 1px solid var(--paragraf-color);
+}
+.form .container .Details form input,
+.form .container .Details form select,
+.form .container .Details form textarea {
+    width: 100%;
+    outline: none;
+    border: 1px solid var(--main-color);
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.form .container .Details form label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.form .container .Details form .name,
+.form .container .Details form .location,
+.form .container .Details form .contact-form {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.form .container .Details form .name > section,
+.form .container .Details form .location > section,
+.form .container .Details form .contact-form > section {
+    flex: 1;
+}
+.form .container .Details form .chek {
+    margin: 30px 0;
+}
+.form .container .Details form .chek > section {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.form .container .Details form .chek input {
+    width: fit-content;
+    margin: 0;
+}
+.form .container .Details form .chek p {
+    color: var(--main-color);
+}@media (max-width: 500px) {
+    .form .container {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+.form .container .Details form button {
+    padding: 10px;
+    outline: none;
+    width: 100%;
+    border: none;
+    background-color: var(--main-color);
+    color: var(--paragraf-color);
+    cursor: pointer;
+}
+/* Start rigt-form-checkout */
+.right-form-checkout {
+    text-transform: capitalize;
+}
+.right-form-checkout .coupon_checkout {
+    border: 1px solid var(--paragraf-color);
+    padding: 15px;
+    margin-bottom: 20px;
+}
+.right-form-checkout .coupon_checkout p {
+    color: var(--main-color);
+    margin: 0 0 10px;
+    font-weight: 600;
+    font-size: 18px;
+}
+.right-form-checkout .coupon_checkout form {
+    position: relative;
+}
+.right-form-checkout .coupon_checkout form input[type= text] {
+    width: 100%;
+    outline: none;
+    border: 1px solid var(--main-color);
+    padding: 10px;
+}
+.right-form-checkout .coupon_checkout form input[type = button] {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--main-color);
+    outline: none;
+    border: none;
+    padding: 11px;
+    color: var(--paragraf-color);
+}
+.right-form-checkout .your-order {
+    padding: 15px;
+    border: 1px solid var(--paragraf-color);
+}
+.right-form-checkout .your-order h2, 
+.right-form-checkout .your-order h4 {
+    margin: 0;
+}
+.right-form-checkout .your-order .top section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.right-form-checkout .your-order .top section:not(.your-order .top section:last-child) {
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--paragraf-color);
+    padding: 10px 0;
+
+}
+.right-form-checkout .your-order .top section:last-child h4,
+.right-form-checkout .your-order .top section:nth-child(4) h4,
+.right-form-checkout .your-order .top section span {
+    color: var(--main-color);
+}
+.right-form-checkout .your-order .top section:last-child {
+    margin-bottom: 40px;
+}
+.right-form-checkout .your-order .type-payment h4 {
+    display: block;
+    text-align: center;
+    color: var(--main-color);
+    border: 1px solid;
+    padding: 10px;
+    font-weight: 600;
+    width: 100%;
+    cursor: pointer;
+}
+.right-form-checkout .your-order .type-payment h4:not(:last-child) {
+    margin-bottom: 20px;
+}
+/* End rigt-form-checkout */
+/* -------- End Checkout page ---------- */
+/* -------------- start contact bage ------------- */
+.form-contact {
+    padding: var(--padding) 0;
+}
+.form-contact > section {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+}
+.form-contact > section label {
+    color: var(--main-color);
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.form-contact > section input {
+    margin-bottom: 15px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid var(--main-color);
+    background-color: var(--paragraf-color);
+}
+.form-contact textarea {
+    text-transform: capitalize;
+    border: 1px solid var(--main-color);
+    outline: none;
+    padding: 10px;
+}
+.form-contact button {
+    margin-top: 25px;
+    padding: 10px;
+    color: var(--paragraf-color);
+    background-color: var(--main-color);
+    border: none;
+    outline: none;
+}
+@media (max-width: 786px) {
+    .form-contact > section {
+        width: 100%;
+    }
+}
+/* -------------- end contact bage ------------- */
+
